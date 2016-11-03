@@ -14,16 +14,25 @@
  * limitations under the License.
  */
 
-package ca.ualberta.cs.unter.model.request;
-
-import ca.ualberta.cs.unter.model.Route;
+package ca.ualberta.cs.unter.exception;
 
 /**
- * Request that has been completed in the past.
- * @see Request
+ * The type Request exception.
  */
-public class CompletedRequest extends Request {
-    public CompletedRequest(String riderUserName, String driverUserName, Route route, double estimatedFare) {
-        super(riderUserName, driverUserName, route, estimatedFare);
+public class RequestException extends Exception{
+    /**
+     * Instantiates a new Request exception.
+     */
+    public RequestException() {
+
+    }
+
+    /**
+     * Instantiates a new Request exception.
+     *
+     * @param message the message
+     */
+    public RequestException(String message) {
+        super(message);
     }
 }
